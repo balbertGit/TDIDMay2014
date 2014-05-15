@@ -10,9 +10,9 @@ namespace TDIDMay2014
     [HubName("chat")]
     public class ChatHub : Hub
     {
-        public void SendMessage(string message)
+        public void Send(string name, string message)
         {
-            Clients.All.hello();
+            Clients.All.broadcastMessage(name, message);
         }
     }
 }

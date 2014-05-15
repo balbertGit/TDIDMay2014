@@ -19,16 +19,23 @@ namespace TDIDMay2014
             var nullOrderer = new NullOrderer();
 
             var cssBundle = new CustomStyleBundle("~/bundles/css");
-            cssBundle.Include("~/Content/Site.less", "~/Content/bootstrap/bootstrap.less");
+            cssBundle.Include("~/Content/Site.less", "~/Content/bootstrap/bootstrap.less", "~/Content/themes/base/jquery-ui.css");
             cssBundle.Transforms.Add(cssTransformer);
             cssBundle.Orderer = nullOrderer;
             bundles.Add(cssBundle);
 
             var jqueryBundle = new CustomScriptBundle("~/bundles/jquery");
             jqueryBundle.Include("~/Scripts/jquery-{version}.js");
+            jqueryBundle.Include("~/Scripts/jquery-ui-{version}.js");
             jqueryBundle.Transforms.Add(jsTransformer);
             jqueryBundle.Orderer = nullOrderer;
             bundles.Add(jqueryBundle);
+
+            var signalRBundle = new CustomScriptBundle("~/bundles/signalR");
+            signalRBundle.Include("~/Scripts/jquery.signalR-{version}.js");
+            signalRBundle.Transforms.Add(jsTransformer);
+            signalRBundle.Orderer = nullOrderer;
+            bundles.Add(signalRBundle);
 
             var jqueryvalBundle = new CustomScriptBundle("~/bundles/jqueryval");
             jqueryvalBundle.Include("~/Scripts/jquery.validate*");
