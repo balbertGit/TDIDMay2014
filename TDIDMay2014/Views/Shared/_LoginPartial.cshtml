@@ -6,6 +6,8 @@
     @Html.AntiForgeryToken()
 
     <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Member", "Index", "Member")</li>
+        <li><span class="glyphicon glyphicon-envelope inverse spacing"><sup id="emailCount"> 10</sup></span></li>
         <li>
             @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Manage", "Account", routeValues: null, htmlAttributes: new { title = "Manage" })
         </li>

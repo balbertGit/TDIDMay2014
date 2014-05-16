@@ -1,7 +1,43 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<h2>SignalR Info</h2>
+<p>ASP.NET library that provides real-time web functionality by allowing the server to push content to connected clients as it happens.</p>
+<ul>
+    <li><strong>Server-side</strong>
+        <ul>
+            <li>Define methods that can be called by clients, and you call methods that run on the client.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Client-side</strong>
+        <ul>
+            <li>Define methods that can be called from the server, and you call methods that run on the server.</li>
+        </ul>
+    </li>
+    <li>SignalR takes care of all of the client-to-server plumbing.</li>
+</ul>
+
+<h2>SignalR Transports</h2>
+<p>Automagically negotiates the best transport method available.</p>
+<ul>
+    <li><strong>WebSockets</strong>  - Enables bi-directional communication between the browser and server.<br />Only available with Windows 8 and Windows Server 2012.</li>
+    <li><strong>Server-Sent Events (SSE)</strong>  – protocol standard based on http connection</li>
+    <li><strong>Forever Frame</strong>  – create a connection in an iframe</li>
+    <li><strong>Long Polling</strong>  – more intelligent. Client opens connection, but server doesn’t respond until there is real data. Still not optimal. Holds open connection.</li>
+    <li><strong>Periodic Polling</strong>  – uses a lot of resources, especially on server</li>
+</ul>
+
+<h2>Use Cases</h2>
+<ul>
+    <li><strong>Server Broadcast</strong> - (notifications) – communication sent to clients initiated by server</li>
+    <li><strong>Peer-to-Peer</strong> - chat</li>
+</ul>
+
+<h2>References</h2>
+<ul>
+    <li><a href="http://www.asp.net/signalr/overview/signalr-20/getting-started-with-signalr-20/tutorial-getting-started-with-signalr-20-and-mvc-5">Tutorial: Getting Started With SignalR &raquo;</a></li>
+    <li><a href="http://www.deanhume.com/Home/BlogPost/get-the-number-of-users-that-are-online-using-signalr/1095">Tutorial: Getting User Counts &raquo;</a></li>
+
+</ul>
