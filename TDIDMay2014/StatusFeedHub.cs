@@ -33,7 +33,7 @@ namespace TDIDMay2014
         public void SendWorkflowItem(string status, string type, string name)
         {
             string userName = Context.User.Identity.GetUserName();
-            string message = status + " " + type + " " + name;
+            string message =  status + " " + type + " " + name;
             Clients.All.broadcastMessage(userName, message);
         }
 
