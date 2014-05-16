@@ -7,8 +7,37 @@
 
     <ul class="nav navbar-nav navbar-right">
         <li>@Html.ActionLink("Member", "Index", "Member")</li>
-        <li><span class="glyphicon glyphicon-envelope inverse spacing"><sup id="emailCount"> 10</sup></span></li>
-        <li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-envelope inverse spacing"><sup id="emailCount"> 4</sup></span> </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#">From: John</a>
+                    <ul>
+                        <li>Subject: Some work request</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">From: Sue</a>
+                    <ul>
+                        <li>Subject: Go Pacers!</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">From: Max</a>
+                    <ul>
+                        <li>Subject: need some help on a task</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">From: Liz</a>
+                    <ul>
+                        <li>Subject: task completed</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+       <li>
             @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Manage", "Account", routeValues: null, htmlAttributes: new { title = "Manage" })
         </li>
         <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
